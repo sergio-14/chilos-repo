@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Jaro:opsz@6..72&family=Lobster&family=Pacifico&family=Permanent+Marker&family=Protest+Strike&display=swap");
+
+.letra{
+  font-family: "Permanent Marker", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #fff5da;
+  font-size: 25px;
+}
+
+.subtitle{
+  font-family: "Permanent Marker", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #fcbe15;
+  font-size: 45px;
+}
+
+.letra:hover{
+  color: #ff6223;
+}
+
+.navb{
+  background: rgba(255, 253, 253, 0);
+}
+
+body{
+  background: #ffffe7;
+}
+.title {
+  font-family: "Permanent Marker", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 80px;
+  color: #fff5da;
+  text-shadow: -3px -3px 0 rgb(255, 94, 0), 3px -3px 0 rgb(255, 94, 0), -3px 3px 0 rgb(255, 94, 0),
+    3px 3px 0 rgb(255, 94, 0);
+}
+
+.sechome {
+  background-image: url("/assets/img/img1.JPG");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: changeBackground 8s infinite;
+}
+
+@keyframes changeBackground {
+  0% {
+    background-image: url("/assets/img/img1.JPG");
+  }
+  33% {
+    background-image: url("/assets/img/img2.JPG");
+  }
+  66% {
+    background-image: url("/assets/img/img3.JPG");
+  }
+  100% {
+    background-image: url("/assets/img/img1.JPG");
+  }
+}
+
+.secvideo {
+  background-image: url("/assets/img/forma.png");
+  background-size: 100% auto; /* Ajusta el ancho al 100% y la altura automáticamente */
+  background-repeat: no-repeat;
+  background-position: top center; /* Posiciona la imagen en la parte superior y centrada horizontalmente */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-start; /* Alinea el contenido al inicio (parte superior) */
+  justify-content: center;
+  animation: forma 8s infinite;
+}
+@keyframes forma {
+  0% {
+    background-image: url("/assets/img/forma.png");
+  }
+  33% {
+    background-image: url("/assets/img/forma2.png");
+  }
+  66% {
+    background-image: url("/assets/img/forma1.png");
+  }
+  100% {
+    background-image: url("/assets/img/forma.png");
+  }
+}
+
+
+.ratio {
+  position: relative;
+  width: 90%;
+  padding-bottom: 45%; 
+  margin: 0 auto; 
+  border-radius: 15px; 
+  overflow: hidden; 
+}
+
+.ratio iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 550px;
+  border: 0;
+  border-radius: 15px; 
+}
+
+.navbar-brand img {
+  position: absolute;
+  bottom: -27px; /* Adjust this value to control the overflow */
+  left: 15%;
+  transform: translateX(-50%);
+}
+
+
+.navb.scrolled {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.3);
+}
+
