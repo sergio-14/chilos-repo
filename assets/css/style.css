@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Acme&family=Jaro:opsz@6..72&family=Lobster&family=Pacifico&family=Permanent+Marker&family=Protest+Strike&display=swap");
 
 .letra{
-  font-family: "Permanent Marker", serif;
+  font-family: "oswald", serif;
   font-optical-sizing: auto;
   font-style: normal;
-  color: #fff5da;
-  font-size: 25px;
+  color: #ad0202;
+  font-size: 20px;
 }
 
 .subtitle{
@@ -17,28 +17,117 @@
 }
 
 .letra:hover{
-  color: #ff6223;
+  color: #ffae00;
 }
 
 .navb{
   background: rgba(255, 253, 253, 0);
 }
+.secnosotros{
+  background: #ffae00f6;
+  border-radius: 20px;
+  border: 1px solid rgb(255, 102, 0);
+}
 
 body{
-  background: #ffffe7;
+  background: #feffef;
 }
 .title {
   font-family: "Permanent Marker", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 80px;
-  color: #fff5da;
-  text-shadow: -3px -3px 0 rgb(255, 94, 0), 3px -3px 0 rgb(255, 94, 0), -3px 3px 0 rgb(255, 94, 0),
-    3px 3px 0 rgb(255, 94, 0);
+  color: #eb0303;
+  text-shadow: -3px -3px 0 rgba(255, 254, 206), 3px -3px 0 rgba(255, 254, 206), -3px 3px 0 rgb(255, 253, 148),
+    3px 3px 0 rgb(138, 119, 98);
+}
+.titledos {
+  font-family: "Permanent Marker", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fffeaa;
+  text-shadow: -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgba(0, 0, 0, 0), -1px 1px 0 rgb(0, 0, 0),
+    1px 1px 0 rgba(0, 0, 0, 0);
+}
+
+.titledoss {
+  font-size: 100px;
+
+  color: #292828;
+  text-shadow: -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0),
+    1px 1px 0 rgb(0, 0, 0);
+}
+
+.text{
+  font-family: "oswald", serif;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: bold;
+  color: #464341;
+}
+
+
+
+.titletres {
+  font-family: "Permanent Marker", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 70px;
+  color: #ffe601;
+  text-shadow: -1px -1px 0 rgb(255, 234, 115), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(255, 234, 115),
+    1px 1px 0 rgb(0, 0, 0);
+}
+
+.titletress {
+  font-family: "Permanent Marker", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 70px;
+  color: #089cff;
+  text-shadow: -1px -1px 0 rgb(118, 178, 255), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(118, 178, 255),
+    1px 1px 0 rgb(0, 0, 0);
+}
+
+.titletresss {
+  font-family: "Permanent Marker", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 70px;
+  color: #ff9c08;
+  text-shadow: -1px -1px 0 rgb(255, 184, 31), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(255, 193, 23),
+    1px 1px 0 rgb(7, 4, 0);
+}
+
+.titlecuatro {
+  font-family: "Permanent Marker", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: 30px;
+  color: #ffffff;
+  padding-right: 230px;
+  text-shadow: -3px -3px 0 rgb(238, 255, 3), 3px -3px 0 rgba(238, 255, 3), -3px 3px 0 rgb(238, 255, 3),
+    3px 3px 0 rgba(238, 255, 3);
+}
+
+.textbo {
+  font-family: "Permanent Marker", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: 27px;
+  color: #7c6005;
+  border-radius: 40px;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 254, 254, 0.267) ;
+  border: 1px solid #ffffff;
+  
 }
 
 .sechome {
-  background-image: url("/assets/img/img1.JPG");
+  background-image: url("/assets/img/r.JPG");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -52,16 +141,16 @@ body{
 
 @keyframes changeBackground {
   0% {
-    background-image: url("/assets/img/img1.JPG");
+    background-image: url("/assets/img/r.JPG");
   }
   33% {
-    background-image: url("/assets/img/img2.JPG");
+    background-image: url("/assets/img/r1.JPG");
   }
   66% {
-    background-image: url("/assets/img/img3.JPG");
+    background-image: url("/assets/img/r2.JPG");
   }
   100% {
-    background-image: url("/assets/img/img1.JPG");
+    background-image: url("/assets/img/r.JPG");
   }
 }
 
@@ -125,3 +214,67 @@ body{
   background: rgba(255, 255, 255, 0.3);
 }
 
+
+
+
+.image-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+ 
+}
+
+.animated-image {
+  position: absolute;
+  bottom: -30%;
+  right: 0;
+  width: 440px; 
+  z-index: 1000;
+}
+
+.prod img {
+  display: none; /* Oculta todas las imágenes por defecto */
+  opacity: 0;
+  width: 100%; /* Ocupa el ancho completo del contenedor */
+  height: 500px; /* Altura fija */
+  object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+  transition: opacity 1s; /* Transición suave al mostrar/ocultar */
+}
+
+.prod img.active {
+  display: block; /* Muestra solo la imagen activa */
+  opacity: 1;
+  animation: pulse 1.5s infinite; /* Pulso automático */
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 1200px) {
+  .prod img {
+    height: 600px; /* Incrementa la altura en pantallas grandes */
+  }
+}
+
+/* Animación de pulso */
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* Tamaño normal */
+  }
+  50% {
+    transform: scale(1.1); /* Crece un 10% */
+  }
+  100% {
+    transform: scale(1); /* Vuelve al tamaño original */
+  }
+}
+
+
+.textos h2 {
+  display: none; /* Oculta todos los textos por defecto */
+  opacity: 0;
+  transition: opacity 1s; /* Transición suave al mostrar/ocultar */
+}
+
+.textos h2.active {
+  display: block; /* Muestra solo el texto activo */
+  opacity: 1;
+}

@@ -7,6 +7,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/assets/css/style.css">
     <title>Catálogo de Productos</title>
     <style>
         .product {
@@ -27,53 +28,241 @@
         .product button:hover {
             background-color: #45a049;
         }
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #032447;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .floating-button .badge {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 5px 10px;
+            font-size: 0.9rem;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1050;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .modal.active {
+            display: block;
+        }
+        
     </style>
 </head>
 <body>
     
     <div class="container">
-        <h1 class="text-center p-3">Catálogo de Productos</h1>
+        <h1 class="text-center title p-5">Catálogo de Productos</h1>
         <div class="row justify-content-center">
-            <div class="product col-5">
-                <h2>Nombre del Producto</h2>
-                <img src="/assets/img/product.png" alt="Imagen del Producto">
-                <p>Peso: 500g</p>
+            <div class="product producto_1 col-5">
+                <h2>CHIPILOS TRADICIONALES</h2>
+                <img src="/assets/img/prd1.png" alt="Imagen del Producto" class="img-fluid">
+                <p>Peso: 190g</p>
                 <p>Valor Nutricional: 200 kcal</p>
-                <p>Precio: 10.00bs</p>
-                <button>Realizar Pedido</button>
+                <p>Precio: <span class="precio">20.00</span> bs</p>
+                <label for="cantidad1">Cantidad:</label>
+                <input type="number" class="form-control cantidad" id="cantidad1" value="1" min="1">
+                <button class="btn btn-primary mt-2 realizar-pedido">Añadir al Pedido</button>
             </div>
-            <div class="product col-5">
-                <h2>Nombre del Producto</h2>
-                <img src="/assets/img/product.png" alt="Imagen del Producto">
-                <p>Peso: 500g</p>
+            <div class="product producto_2 col-5">
+                <h2>CHIPILOS TRADICIONALES PEQUEÑOS</h2>
+                <img src="/assets/img/prd1.png" alt="Imagen del Producto" class="img-fluid">
+                <p>Peso: 100g</p>
                 <p>Valor Nutricional: 200 kcal</p>
-                <p>Precio: 10.00bs</p>
-                <button>Realizar Pedido</button>
+                <p>Precio: <span class="precio">10.00</span> bs</p>
+                <label for="cantidad2">Cantidad:</label>
+                <input type="number" class="form-control cantidad" id="cantidad2" value="1" min="1">
+                <button class="btn btn-primary mt-2 realizar-pedido">Añadir al Pedido</button>
             </div>
 
-            <div class="product col-5 pt-5">
-                <h2>Nombre del Producto</h2>
-                <img src="/assets/img/product.png" alt="Imagen del Producto">
+            <div class="product producto_3 col-md-5 col-sm-12 mb-4">
+                <h2>CHIPILOS PIMIENTA BLANCA</h2>
+                <img src="/assets/img/prd2.png" alt="Imagen del Producto" class="img-fluid">
                 <p>Peso: 500g</p>
                 <p>Valor Nutricional: 200 kcal</p>
-                <p>Precio: 10.00bs</p>
-                <button>Realizar Pedido</button>
+                <p>Precio: <span class="precio">10.00</span> bs</p>
+                <label for="cantidad3">Cantidad:</label>
+                <input type="number" class="form-control cantidad" id="cantidad3" value="1" min="1">
+                <button class="btn btn-primary mt-2 realizar-pedido">Añadir al Pedido</button>
             </div>
-            <div class="product col-5 pt-5">
-                <h2>Nombre del Producto</h2>
-                <img src="/assets/img/product.png" alt="Imagen del Producto">
+            
+            <div class="product producto_4 col-md-5 col-sm-12 mb-4">
+                <h2>CHIPILOS PIMIENTA BLANCA PEQUEÑO</h2>
+                <img src="/assets/img/prd2.png" alt="Imagen del Producto" class="img-fluid">
                 <p>Peso: 500g</p>
                 <p>Valor Nutricional: 200 kcal</p>
-                <p>Precio: 10.00bs</p>
-                <button>Realizar Pedido</button>
+                <p>Precio: <span class="precio">10.00</span> bs</p>
+                <label for="cantidad4">Cantidad:</label>
+                <input type="number" class="form-control cantidad" id="cantidad4" value="1" min="1">
+                <button class="btn btn-primary mt-2 realizar-pedido">Añadir al Pedido</button>
+            </div>
+            
+            <div class="product producto_5 col-md-5 col-sm-12 mb-4">
+                <h2>CHIPILOS SABOR CEBOLLA</h2>
+                <img src="/assets/img/prd3.png" alt="Imagen del Producto" class="img-fluid">
+                <p>Peso: 500g</p>
+                <p>Valor Nutricional: 200 kcal</p>
+                <p>Precio: <span class="precio">10.00</span> bs</p>
+                <label for="cantidad5">Cantidad:</label>
+                <input type="number" class="form-control cantidad" id="cantidad5" value="1" min="1">
+                <button class="btn btn-primary mt-2 realizar-pedido">Añadir al Pedido</button>
+            </div>
+            
+            <div class="product producto_6 col-md-5 col-sm-12 mb-4">
+                <h2>CHIPILOS SABOR CEBOLLA PEQUEÑO</h2>
+                <img src="/assets/img/prd3.png" alt="Imagen del Producto" class="img-fluid">
+                <p>Peso: 500g</p>
+                <p>Valor Nutricional: 200 kcal</p>
+                <p>Precio: <span class="precio">10.00</span> bs</p>
+                <label for="cantidad6">Cantidad:</label>
+                <input type="number" class="form-control cantidad" id="cantidad6" value="1" min="1">
+                <button class="btn btn-primary mt-2 realizar-pedido">Añadir al Pedido</button>
             </div>
         </div>
     
     </div>
+    <button id="carritoButton" class="floating-button">
+        🛒
+        <span id="carritoCount" class="badge">0</span>
+    </button>
+    <!-- Modal -->
+    <div id="pedidoModal" class="modal">
+        <h2>Resumen del Pedido</h2>
+        <ul id="pedidoLista"></ul>
+        <p>Total: <span id="precioTotal">0.00</span> bs</p>
+        <button id="enviar-whatsapp" class="btn btn-success mt-3">
+            Enviar a WhatsApp
+        </button>
+        <button id="cerrarModal" class="btn btn-outline-secondary mt-3">Cerrar</button>
+    </div>
+
+    
 
     <!-- Puedes duplicar el bloque anterior para agregar más productos -->
      
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const productos = document.querySelectorAll('.product');
+        const pedidoLista = document.getElementById('pedidoLista');
+        const precioTotal = document.getElementById('precioTotal');
+        const modal = document.getElementById('pedidoModal');
+        const cerrarModal = document.getElementById('cerrarModal');
+        const carritoButton = document.getElementById('carritoButton');
+        const carritoCount = document.getElementById('carritoCount');
+        let total = 0;
+        let pedidoCount = 0;
+    
+        productos.forEach(producto => {
+            const boton = producto.querySelector('.realizar-pedido');
+            if (!boton) return; // Ignorar productos sin botón
+    
+            boton.addEventListener('click', () => {
+                const nombre = producto.querySelector('h2').innerText;
+                const precio = parseFloat(producto.querySelector('.precio').innerText);
+                const cantidadInput = producto.querySelector('.cantidad');
+                const cantidad = parseInt(cantidadInput.value);
+    
+                if (isNaN(cantidad) || cantidad <= 0) {
+                    alert("Por favor, ingresa una cantidad válida.");
+                    return;
+                }
+    
+                // Verificar si el producto ya está en la lista
+                const items = Array.from(pedidoLista.children);
+                const existente = items.find(item => item.textContent.includes(nombre));
+    
+                if (existente) {
+                    alert("Este producto ya está en el carrito.");
+                    return;
+                }
+    
+                // Añadir producto a la lista
+                const li = document.createElement('li');
+                li.textContent = `${nombre} (x${cantidad}) - ${(precio * cantidad).toFixed(2)} bs`;
+                pedidoLista.appendChild(li);
+    
+                // Actualizar el total
+                total += precio * cantidad;
+                precioTotal.innerText = total.toFixed(2);
+    
+                // Incrementar el contador del carrito
+                pedidoCount++;
+                carritoCount.innerText = pedidoCount;
+    
+                alert("Producto añadido al carrito.");
+            });
+        });
+    
+        carritoButton.addEventListener('click', () => {
+            modal.classList.add('active');
+        });
+    
+        cerrarModal.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+    });
+</script>
+<script>
+    // Función para obtener el resumen del pedido
+    function obtenerResumenPedido() {
+        let resumen = "Resumen de Pedido:\n";
+        let total = 0;
 
+        // Seleccionar todos los productos y cantidades
+        document.querySelectorAll('.product').forEach(function(producto) {
+            let nombre = producto.querySelector('h2').textContent;
+            let cantidad = producto.querySelector('.cantidad').value;
+            let precio = parseFloat(producto.querySelector('.precio').textContent.trim());
+            let subtotal = precio * cantidad;
+
+            // Añadir al resumen
+            resumen += `${nombre} - Cantidad: ${cantidad} - Precio: ${precio} bs - Subtotal: ${subtotal.toFixed(2)} bs\n`;
+
+            // Sumar al total
+            total += subtotal;
+        });
+
+        // Añadir el total al final del resumen
+        resumen += `\nTotal: ${total.toFixed(2)} bs`;
+
+        return resumen;
+    }
+
+    // Agregar el evento al botón de WhatsApp
+    document.getElementById("enviar-whatsapp").addEventListener("click", function() {
+        let numeroWhatsApp = "59173227139"; // Reemplaza con el número de teléfono de WhatsApp (con código de país)
+        let mensaje = obtenerResumenPedido();
+        let url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+        
+        // Redirigir a WhatsApp
+        window.open(url, "_blank");
+    });
+</script>
 </html>
