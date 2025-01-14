@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/botons.css">
+    <link rel="stylesheet" href="/assets/css/reponive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   </head>
   <body>
@@ -73,9 +74,8 @@
       <div class=" container row align-items-center">
         <!-- Contenido -->
         <div class="col-md-6 ">
-            <h1 class="fw-bold title text-center">Bienvenido al Nuevo Sabor</h1>
-            <!-- <p class="letra text-center">¡"Haz que tus momentos brillen con Chilos, donde la calidad y el estilo se encuentran! 🎉✨"</p> -->
-            <div class="mt-4 d-flex justify-content-center ">
+          <h1 class="fw-bold title text-center">Bienvenido al Nuevo Sabor</h1>
+          <div class=" botonflotante mt-4 d-flex justify-content-center ">
               
               <div class="align-items-center pt-5" >
                 <button class="button">
@@ -209,18 +209,11 @@
 
                 
               </div>
-
-              <!-- <button class="Btnn">
-                <span class="svgContainer">
-                  <svg fill="white" class="svgIcon" viewBox="0 0 448 512" height="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
-                </span>
-                <span class="BG"></span>
-              </button> -->
-            </div>
-            
           </div>
+            
+        </div>
         <!-- Imagen -->
-        <div class="col-md-4 text-center">
+        <div class="col-md-4 pt-md-0 pt-5 text-center">
           <img
             src=""
             alt=""
@@ -235,31 +228,27 @@
     <section class="secvideo py-5 h-100">
       <div class="container">
         
-        <h2 class="titledos text-center">☙Nuestros Productos❧</h2>
+        <h2 class="titledos text-center py-md-5 py-2">☙Nuestros Productos❧</h2>
        
         <div class="row align-items-center">
           <div class="col-md-6 text-center ">
-            <div class="prod">
-              <img src="/assets/img/prd1.png" alt="Prdo " class="img-fluid rounded mb-3 active">
-              <img src="/assets/img/prd2.png" alt="Prdo " class="img-fluid rounded mb-3">
-              <img src="/assets/img/prd3.png" alt="Prdo " class="img-fluid rounded mb-3">
+            <div class="prod pt-md-5 pt-0">
+              <img src="/assets/img/prod1.jpg" alt="Prdo " class="img-fluid rounded mb-3 active">
+              <img src="/assets/img/prod2.jpg" alt="Prdo " class="img-fluid rounded mb-3">
+              <img src="/assets/img/prod3.jpg" alt="Prdo " class="img-fluid rounded mb-3">
             </div>
           </div>
             <div class="col-md-6 text-center d-flex flex-column justify-content-start">
             
             <div class="textos">
-              <h2 class=" titletresss active ">Sabor <br>Cebolla </h2>
-              <h2 class=" titletress ">Sabor Pimienta Blanca </h2>
-              <h2 class=" titletres ">Sabor Tradicional </h2>
+              <h3 class="titlecuatro ">Descubre El Sabor  <br> Que Conbina Con Todo</h3>
+             
             </div>
 
             <script>
               document.addEventListener("DOMContentLoaded", () => {
                 const images = document.querySelectorAll(".prod img");
-                const texts = document.querySelectorAll(".textos h2");
                 let currentImageIndex = 0;
-                let currentTextIndex = 0;
-              
                 function showNextImage() {
                   // Ocultar la imagen actual
                   images[currentImageIndex].classList.remove("active");
@@ -270,31 +259,20 @@
                   // Mostrar la siguiente imagen
                   images[currentImageIndex].classList.add("active");
                 }
-              
-                function showNextText() {
-                  // Ocultar el texto actual
-                  texts[currentTextIndex].classList.remove("active");
-              
-                  // Mover al siguiente índice
-                  currentTextIndex = (currentTextIndex + 1) % texts.length;
-              
-                  // Mostrar el siguiente texto
-                  texts[currentTextIndex].classList.add("active");
-                }
-              
                 // Cambiar imagen y texto cada 3 segundos
                 setInterval(() => {
                   showNextImage();
-                  showNextText();
                 }, 3000);
               });
               
               
             </script>
-            <h3 class="text-white">.</h3>
-            <h3 class="text-white">.</h3>
-            <h3 class="titlecuatro ">Descubre El Sabor  <br> Que Conbina Con Todo</h3>
-            <h3 class="text-white">.</h3>
+            <div>
+              <h3 class="text-white">.</h3>
+              <h3 class="text-white ">.</h3>
+            <h3 class="text-white ">.</h3>
+            <h3 class="text-white ">.</h3>
+            </div>
             <div class="d-flex justify-content-left ">
                 <button type="button" class="textbo btn  animate__animated  animate__infinite animate__rubberBand" style="z-index: 9999;" onclick="window.location.href='catalogo.html'"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor" class="bg-warning m-3 p-1 rounded-circle text-white bi bi-cart-plus" viewBox="0 0 16 16">
                   <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>

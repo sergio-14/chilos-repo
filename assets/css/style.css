@@ -30,7 +30,7 @@
 }
 
 body{
-  background: #feffef;
+  background: #ffffff;
 }
 .title {
   font-family: "Permanent Marker", serif;
@@ -41,15 +41,16 @@ body{
   text-shadow: -3px -3px 0 rgba(255, 254, 206), 3px -3px 0 rgba(255, 254, 206), -3px 3px 0 rgb(255, 253, 148),
     3px 3px 0 rgb(138, 119, 98);
 }
+
 .titledos {
   font-family: "Permanent Marker", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 40px;
   font-weight: bold;
-  color: #fffeaa;
-  text-shadow: -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgba(0, 0, 0, 0), -1px 1px 0 rgb(0, 0, 0),
-    1px 1px 0 rgba(0, 0, 0, 0);
+  color: #ff5e2d;
+  text-shadow: -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0),
+    1px 1px 0 rgb(0, 0, 0);
 }
 
 .titledoss {
@@ -105,9 +106,8 @@ body{
   font-weight: 400;
   font-style: normal;
   text-align: center;
-  font-size: 30px;
+  font-size: 50px;
   color: #ffffff;
-  padding-right: 230px;
   text-shadow: -3px -3px 0 rgb(238, 255, 3), 3px -3px 0 rgba(238, 255, 3), -3px 3px 0 rgb(238, 255, 3),
     3px 3px 0 rgba(238, 255, 3);
 }
@@ -226,7 +226,7 @@ body{
 
 .animated-image {
   position: absolute;
-  bottom: -30%;
+  bottom: -50%;
   right: 0;
   width: 440px; 
   z-index: 1000;

@@ -1,0 +1,73 @@
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 55px;
+        
+    }
+    .titledos{
+        font-size: 30px;
+       
+    }
+    .titletres{
+        font-size: 45px;
+       
+    }
+    .titletress{
+        font-size: 45px;
+       
+    }
+    .titletresss{
+        font-size: 45px;
+       
+    }
+    .titlecuatro {
+        
+        font-size: 30px;
+        color: #ffffff;
+        padding-right: 2px;
+        text-shadow: -3px -3px 0 rgb(238, 255, 3), 3px -3px 0 rgba(238, 255, 3), -3px 3px 0 rgb(238, 255, 3),
+          3px 3px 0 rgba(238, 255, 3);
+      }
+
+}
+@media (max-width: 768px) {
+    .botonflotante * {
+        display: none;
+    }
+    .prod img {
+        display: none; /* Oculta todas las imágenes por defecto */
+        opacity: 0;
+        width: 60%; /* Ocupa el ancho completo del contenedor */
+        height: 330px; /* Altura fija */
+        object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+        transition: opacity 1s; /* Transición suave al mostrar/ocultar */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
+      
+    .animated-image {
+        position: absolute;
+        bottom: -40%;
+        right: 0;
+        max-width: 260px; 
+        z-index: 1000;
+    }
+    .sechome {
+        background-image: url("/assets/img/resplogo.jpg");
+      animation: changeMobileBackground 8s infinite; /* Nueva animación para móviles */
+    }
+  
+    @keyframes changeMobileBackground {
+      0% {
+        background-image: url("/assets/img/resplogo.jpg");
+      }
+      33% {
+        background-image: url("/assets/img/resplogo2.jpg");
+      }
+      66% {
+        background-image: url("/assets/img/resplogo1.jpg");
+      }
+      100% {
+        background-image: url("/assets/img/resplogo.jpg");
+      }
+    }
+  }
