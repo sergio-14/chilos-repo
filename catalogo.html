@@ -1,268 +1,427 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/reponive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <title>Catálogo de Productos</title>
-    <style>
-        .product {
-           
-            text-align: center;
-        }
-        .product img {
-            max-width: 100%;
-            height: auto;
-        }
-        .product button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-        }
-        .product button:hover {
-            background-color: #45a049;
-        }
-        .floating-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #032447;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-        }
 
-        .floating-button .badge {
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            background-color: red;
-            color: white;
-            border-radius: 50%;
-            padding: 5px 10px;
-            font-size: 0.9rem;
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1050;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50%;
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .modal.active {
-            display: block;
-        }
-        
-    </style>
 </head>
-<body>
-    
-    <div class="container">
-        <h1 class="text-center title p-5">Catálogo de Productos</h1>
-        <div class="row justify-content-center">
-            <div class="product producto_1 col-5">
-                <h2>CHIPILOS TRADICIONALES</h2>
-                <img src="/assets/img/prd1.png" alt="Imagen del Producto" class="img-fluid">
-                <p>Peso: 190g</p>
-                <p>Valor Nutricional: 200 kcal</p>
-                <p>Precio: <span class="precio">20.00</span> bs</p>
-                <label for="cantidad1">Cantidad:</label>
-                <input type="number" class="form-control cantidad" id="cantidad1" value="1" min="1">
-                <button class="btn btn-primary mt-2 realizar-pedido">Añadir al Pedido</button>
+
+<body class="contenidoproductos">
+
+    <div class="container pb-5">
+        <h1 class="text-center  textttt p-md-5 p-3">Catálogo de Productos</h1>
+        <div class="row justify-content-center gap-5 px-2  px-md-0">
+            <div class="product producto_1 col-12 col-md-5 p-md-5 p-0 pb-5 pb-md-0">
+                <img src="/assets/img/pc3.png" alt="Imagen del Producto" class="img-fluid imgpc animate__animated  animate__infinite animate__tada">
+                <h2 class="titlecuatroo pb-md-4 ">Chipilos Tradicionales</h2>
+                <p class="text">Peso: 100g</p>
+                <div class="row justify-content-center align-items-center">
+                    
+                    <div class="texttt col-md-5 col-6 text-center">
+                        <label for="cantidad1">Cantidad:</label>
+                        <div class="input-group">
+                            <button class="btn btn-outline-success text" type="button" id="decrementar1">-</button>
+                            <input type="text" class="form-control cantidad" id="cantidad1" value="0" min="0">
+                            <button class="btn btn-outline-success text" type="button" id="incrementar1">+</button>
+                        </div>
+                    </div>
+                 
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-7 col-12 text-center order-md-1 order-2">
+                        <button class="btn btn-success  mt-2 realizar-pedido">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-patch-plus" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 5.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 .5-.5"/>
+                                <path d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911z"/>
+                            </svg>
+                            
+                            Añadir
+                        </button>
+                        <button class="btn btn-outline-secondary mt-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-up-right-circle-fill" viewBox="0 0 16 16">
+                                <path d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"/>
+                            </svg>
+                            detalle
+                        </button>
+                    </div>
+                    <div class="texttt col-md-3 col-12 order-1 order-md-2 text-center">
+                        <p class="text pt-3">Precio: <span class="precio">10.00</span> bs</p>
+                    </div>
+                </div>
             </div>
-            <div class="product producto_2 col-5">
-                <h2>CHIPILOS TRADICIONALES PEQUEÑOS</h2>
-                <img src="/assets/img/prd1.png" alt="Imagen del Producto" class="img-fluid">
-                <p>Peso: 100g</p>
-                <p>Valor Nutricional: 200 kcal</p>
-                <p>Precio: <span class="precio">10.00</span> bs</p>
-                <label for="cantidad2">Cantidad:</label>
-                <input type="number" class="form-control cantidad" id="cantidad2" value="1" min="1">
-                <button class="btn btn-primary mt-2 realizar-pedido">Añadir al Pedido</button>
+            <div class="product producto_2 col-md-5 col-12 p-md-5 p-0 pb-5 pb-md-0">
+                <img src="/assets/img/pc3.png" alt="Imagen del Producto" class="img-fluid imgpc animate__animated  animate__infinite animate__tada">
+                <h2 class="titlecuatroo">Chipilos Tradicionales Pequeños</h2>
+                <p class="text">Peso: 100g</p>
+                <div class="row justify-content-center align-items-center">
+                    
+                    <div class="texttt col-md-5 col-6 text-center">
+                        <label for="cantidad2">Cantidad:</label>
+                        <div class="input-group">
+                            <button class="btn btn-outline-success text" type="button" id="decrementar2">-</button>
+                            <input type="text" class="form-control cantidad" id="cantidad2" value="0" min="0">
+                            <button class="btn btn-outline-success text" type="button" id="incrementar2">+</button>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-7 col-12 text-center order-2 order-md-1">
+                        <button class="btn btn-success mt-2 realizar-pedido">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-patch-plus" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 5.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 .5-.5"/>
+                                <path d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911z"/>
+                            </svg>
+                            
+                            Añadir
+                        </button>
+                        <button class="btn btn-outline-secondary mt-2 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-up-right-circle-fill" viewBox="0 0 16 16">
+                                <path d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"/>
+                            </svg>
+                            detalle
+                        </button>
+                    </div>
+                    <div class="texttt col-md-3 col-12 order-1 order-md-2 text-center">
+                        <p class="text pt-3">Precio: <span class="precio">10.00</span> bs</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="product producto_3 col-md-5 col-sm-12 mb-4">
-                <h2>CHIPILOS PIMIENTA BLANCA</h2>
-                <img src="/assets/img/prd2.png" alt="Imagen del Producto" class="img-fluid">
-                <p>Peso: 500g</p>
-                <p>Valor Nutricional: 200 kcal</p>
-                <p>Precio: <span class="precio">10.00</span> bs</p>
-                <label for="cantidad3">Cantidad:</label>
-                <input type="number" class="form-control cantidad" id="cantidad3" value="1" min="1">
-                <button class="btn btn-primary mt-2 realizar-pedido">Añadir al Pedido</button>
+            <div class="product producto_3 col-12 col-md-5 p-md-5 p-0 pb-5 pb-md-0">
+                <img src="/assets/img/pc1.png" alt="Imagen del Producto" class="img-fluid imgpc animate__animated  animate__infinite animate__tada">
+                <h2 class="titlecuatroo">Chipilos Pimienta Blanca</h2>
+                <p class="text">Peso: 190g</p>
+                <div class="row justify-content-center align-items-center">
+                    
+                    <div class="texttt col-6 col-md-5 text-center">
+                        <label for="cantidad3">Cantidad:</label>
+                        <div class="input-group">
+                            <button class="btn btn-outline-success text" type="button" id="decrementar3">-</button>
+                            <input type="text" class="form-control cantidad" id="cantidad3" value="0" min="0">
+                            <button class="btn btn-outline-success text" type="button" id="incrementar3">+</button>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-7 col-12 order-2 order-md-1 text-center">
+                        <button class="btn btn-success mt-2  realizar-pedido">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-patch-plus" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 5.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 .5-.5"/>
+                                <path d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911z"/>
+                            </svg>
+                           
+                            Añadir
+                        </button>
+                        <button class="btn btn-outline-secondary mt-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-up-right-circle-fill" viewBox="0 0 16 16">
+                                <path d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"/>
+                            </svg>
+                            detalle
+                        </button>
+                    </div>
+                    <div class="texttt col-md-3 col-12 order-1 order-md-2 text-center">
+                        <p class="text pt-3">Precio: <span class="precio">10.00</span> bs</p>
+                    </div>
+                </div>
             </div>
-            
-            <div class="product producto_4 col-md-5 col-sm-12 mb-4">
-                <h2>CHIPILOS PIMIENTA BLANCA PEQUEÑO</h2>
-                <img src="/assets/img/prd2.png" alt="Imagen del Producto" class="img-fluid">
-                <p>Peso: 500g</p>
-                <p>Valor Nutricional: 200 kcal</p>
-                <p>Precio: <span class="precio">10.00</span> bs</p>
-                <label for="cantidad4">Cantidad:</label>
-                <input type="number" class="form-control cantidad" id="cantidad4" value="1" min="1">
-                <button class="btn btn-primary mt-2 realizar-pedido">Añadir al Pedido</button>
+
+            <div class="product producto_4 col-12 col-md-5 p-md-5 p-0 pb-5 pb-md-0">
+                
+                <img src="/assets/img/pc1.png" alt="Imagen del Producto" class="img-fluid imgpc animate__animated  animate__infinite animate__tada">
+                <h2 class="titlecuatroo">Chipilos Pimienta Blanca Pequeño</h2>
+                <p class="text">Peso: 500g</p>
+                <div class="row justify-content-center align-items-center">
+                    
+                    <div class="texttt col-md-5 col-6 text-center">
+                        <label for="cantidad4">Cantidad:</label>
+                        <div class="input-group">
+                            <button class="btn btn-outline-success text" type="button" id="decrementar4">-</button>
+                            <input type="text" class="form-control cantidad" id="cantidad4" value="0" min="0">
+                            <button class="btn btn-outline-success text" type="button" id="incrementar4">+</button>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-7 col-12 order-2 order-md-1 text-center">
+                        <button class="btn btn-success mt-2 realizar-pedido">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-patch-plus" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 5.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 .5-.5"/>
+                                <path d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911z"/>
+                            </svg>
+                            
+                            Añadir
+                        </button>
+                        <button class="btn btn-outline-secondary mt-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-up-right-circle-fill" viewBox="0 0 16 16">
+                                <path d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"/>
+                            </svg>
+                            detalle
+                        </button>
+                    </div>
+                    <div class="texttt col-md-3 col-12 order-1 order-md-2 text-center">
+                        <p class="text pt-3">Precio: <span class="precio">10.00</span> bs</p>
+                    </div>
+                </div>
             </div>
-            
-            <div class="product producto_5 col-md-5 col-sm-12 mb-4">
-                <h2>CHIPILOS SABOR CEBOLLA</h2>
-                <img src="/assets/img/prd3.png" alt="Imagen del Producto" class="img-fluid">
-                <p>Peso: 500g</p>
-                <p>Valor Nutricional: 200 kcal</p>
-                <p>Precio: <span class="precio">10.00</span> bs</p>
-                <label for="cantidad5">Cantidad:</label>
-                <input type="number" class="form-control cantidad" id="cantidad5" value="1" min="1">
-                <button class="btn btn-primary mt-2 realizar-pedido">Añadir al Pedido</button>
+
+            <div class="product producto_5 col-12 col-md-5 p-md-5 p-0 pb-5 pb-md-0">
+                <img src="/assets/img/pc2.png" alt="Imagen del Producto" class="img-fluid imgpc animate__animated  animate__infinite animate__tada">
+                <h2 class="titlecuatroo">Chipilos Sabor Cebolla</h2>
+                <p class="text">Peso: 190g</p>
+                <div class="row justify-content-center align-items-center">
+                    
+                    <div class="texttt col-md-5 col-6  text-center">
+                        <label for="cantidad5">Cantidad:</label>
+                        <div class="input-group">
+                            <button class="btn btn-outline-success text" type="button" id="decrementar5">-</button>
+                            <input type="text" class="form-control cantidad" id="cantidad5" value="0" min="0">
+                            <button class="btn btn-outline-success text" type="button" id="incrementar5">+</button>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-7 col-12 order-2 order-md-1 text-center">
+                        <button class="btn btn-success mt-2 realizar-pedido">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-patch-plus" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 5.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 .5-.5"/>
+                                <path d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911z"/>
+                            </svg>
+                            
+                            Añadir
+                        </button>
+                        <button class="btn btn-outline-secondary mt-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-up-right-circle-fill" viewBox="0 0 16 16">
+                                <path d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"/>
+                            </svg>
+                            detalle
+                        </button>
+                    </div>
+                    <div class="texttt col-md3 col-12 order-1 order-md-2 text-center">
+                        <p class="text pt-3">Precio: <span class="precio">10.00</span> bs</p>
+                    </div>
+                </div>
             </div>
-            
-            <div class="product producto_6 col-md-5 col-sm-12 mb-4">
-                <h2>CHIPILOS SABOR CEBOLLA PEQUEÑO</h2>
-                <img src="/assets/img/prd3.png" alt="Imagen del Producto" class="img-fluid">
-                <p>Peso: 500g</p>
-                <p>Valor Nutricional: 200 kcal</p>
-                <p>Precio: <span class="precio">10.00</span> bs</p>
-                <label for="cantidad6">Cantidad:</label>
-                <input type="number" class="form-control cantidad" id="cantidad6" value="1" min="1">
-                <button class="btn btn-primary mt-2 realizar-pedido">Añadir al Pedido</button>
+
+            <div class="product producto_6 col-12 col-md-5 p-md-5 p-0 pb-5 pb-md-0">
+                
+                <img src="/assets/img/pc2.png" alt="Imagen del Producto" class="img-fluid imgpc animate__animated  animate__infinite animate__tada">
+                <h2 class="titlecuatroo">Chipilos Sabor Cebolla Pequeño</h2>
+                <p class="text">Peso: 500g</p>
+                <div class="row justify-content-center align-items-center">
+                    
+                    <div class="texttt col-md-5 col-6 text-center">
+                        <label for="cantidad6">Cantidad:</label>
+                        <div class="input-group">
+                            <button class="btn btn-outline-success text" type="button" id="decrementar6">-</button>
+                            <input type="text" class="form-control cantidad" id="cantidad6" value="0" min="0">
+                            <button class="btn btn-outline-success text" type="button" id="incrementar6">+</button>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-7 col-12 order-2 order-md-1 text-center">
+                        <button class="btn btn-success mt-2 realizar-pedido">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-patch-plus" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 5.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 .5-.5"/>
+                                <path d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911z"/>
+                            </svg>
+                            
+                            Añadir
+                        </button>
+                        <button class="btn btn-outline-secondary mt-2 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-up-right-circle-fill" viewBox="0 0 16 16">
+                                <path d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"/>
+                            </svg>
+                            detalle
+                        </button>
+                    </div>
+                    <div class="texttt col-md-3 col-12 order-1 order-md-2 text-center">
+                        <p class="text pt-3">Precio: <span class="precio">10.00</span> bs</p>
+                    </div>
+                </div>
             </div>
         </div>
-    
+
     </div>
+    <a  href="index.html" class="floating-button1">
+        🏛️
+    </a>
     <button id="carritoButton" class="floating-button">
         🛒
         <span id="carritoCount" class="badge">0</span>
     </button>
-    <!-- Modal -->
-    <div id="pedidoModal" class="modal">
-        <h2>Resumen del Pedido</h2>
-        <ul id="pedidoLista"></ul>
-        <p>Total: <span id="precioTotal">0.00</span> bs</p>
-        <button id="enviar-whatsapp" class="btn btn-success mt-3">
-            Enviar a WhatsApp
-        </button>
-        <button id="cerrarModal" class="btn btn-outline-secondary mt-3">Cerrar</button>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <h1 class="modal-title text fs-5" id="staticBackdropLabel">Resumen del Pedido</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ul id="pedidoLista" class="list-group mb-3 texttt"></ul>
+              <p class="text-end text">Total: <span id="precioTotal">0.00</span> bs</p>
+            </div>
+            <div class="modal-footer texttt">
+              <button id="enviar-whatsapp" type="button" class="btn btn-success">
+                Enviar a WhatsApp
+              </button>
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
     </div>
-
     
 
-    <!-- Puedes duplicar el bloque anterior para agregar más productos -->
-     
 </body>
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const productos = document.querySelectorAll('.product');
-        const pedidoLista = document.getElementById('pedidoLista');
-        const precioTotal = document.getElementById('precioTotal');
-        const modal = document.getElementById('pedidoModal');
-        const cerrarModal = document.getElementById('cerrarModal');
-        const carritoButton = document.getElementById('carritoButton');
-        const carritoCount = document.getElementById('carritoCount');
-        let total = 0;
-        let pedidoCount = 0;
+    document.addEventListener("DOMContentLoaded", function () {
+        // Actualizar cantidad en el input
+        function actualizarCantidad(botonId, inputId, esIncremento) {
+            const boton = document.getElementById(botonId);
+            const input = document.getElementById(inputId);
     
-        productos.forEach(producto => {
-            const boton = producto.querySelector('.realizar-pedido');
-            if (!boton) return; // Ignorar productos sin botón
-    
-            boton.addEventListener('click', () => {
-                const nombre = producto.querySelector('h2').innerText;
-                const precio = parseFloat(producto.querySelector('.precio').innerText);
-                const cantidadInput = producto.querySelector('.cantidad');
-                const cantidad = parseInt(cantidadInput.value);
-    
-                if (isNaN(cantidad) || cantidad <= 0) {
-                    alert("Por favor, ingresa una cantidad válida.");
-                    return;
+            boton.addEventListener("click", function () {
+                let cantidad = parseInt(input.value) || 0;
+                if (esIncremento) {
+                    cantidad++;
+                } else if (cantidad > 0) {
+                    cantidad--;
                 }
+                input.value = cantidad;
+            });
+        }
     
-                // Verificar si el producto ya está en la lista
-                const items = Array.from(pedidoLista.children);
-                const existente = items.find(item => item.textContent.includes(nombre));
+        // Vincular botones de incremento y decremento a sus inputs
+        for (let i = 1; i <= 6; i++) {
+            actualizarCantidad(`incrementar${i}`, `cantidad${i}`, true);
+            actualizarCantidad(`decrementar${i}`, `cantidad${i}`, false);
+        }
     
-                if (existente) {
-                    alert("Este producto ya está en el carrito.");
-                    return;
+        const carritoButton = document.getElementById("carritoButton");
+        const carritoCount = document.getElementById("carritoCount");
+        const pedidoLista = document.getElementById("pedidoLista");
+        const precioTotal = document.getElementById("precioTotal");
+    
+        // Manejar carrito
+        let carrito = [];
+    
+        document.querySelectorAll(".realizar-pedido").forEach((button, index) => {
+            button.addEventListener("click", function () {
+                const cantidadInput = document.getElementById(`cantidad${index + 1}`);
+                const cantidad = parseInt(cantidadInput.value) || 0;
+                if (cantidad > 0) {
+                    const producto = document.querySelector(`.producto_${index + 1}`);
+                    const nombre = producto.querySelector("h2").textContent;
+                    const precio = parseFloat(producto.querySelector(".precio").textContent);
+                    const totalProducto = cantidad * precio;
+    
+                    // Agregar al carrito o actualizar cantidad si ya existe
+                    const productoEnCarrito = carrito.find(item => item.nombre === nombre);
+                    if (productoEnCarrito) {
+                        productoEnCarrito.cantidad += cantidad;
+                        productoEnCarrito.total += totalProducto;
+                    } else {
+                        carrito.push({ nombre, cantidad, precio, total: totalProducto });
+                    }
+    
+                    // Actualizar contador del carrito
+                    carritoCount.textContent = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+    
+                    // Resetear cantidad
+                    cantidadInput.value = 0;
                 }
-    
-                // Añadir producto a la lista
-                const li = document.createElement('li');
-                li.textContent = `${nombre} (x${cantidad}) - ${(precio * cantidad).toFixed(2)} bs`;
-                pedidoLista.appendChild(li);
-    
-                // Actualizar el total
-                total += precio * cantidad;
-                precioTotal.innerText = total.toFixed(2);
-    
-                // Incrementar el contador del carrito
-                pedidoCount++;
-                carritoCount.innerText = pedidoCount;
-    
-                alert("Producto añadido al carrito.");
             });
         });
     
-        carritoButton.addEventListener('click', () => {
-            modal.classList.add('active');
+        // Mostrar modal del pedido
+        carritoButton.addEventListener("click", function () {
+            const modal = new bootstrap.Modal(document.getElementById("staticBackdrop"));
+            pedidoLista.innerHTML = "";
+            let total = 0;
+            carrito.forEach((item, index) => {
+                const li = document.createElement("li");
+                li.classList.add("list-group-item", "d-flex", "justify-content-between", "align-items-center");
+                li.textContent = `${item.nombre} - ${item.cantidad} x ${item.precio.toFixed(2)} bs = ${item.total.toFixed(2)} bs`;
+    
+                // Crear botón de eliminar
+                const eliminarButton = document.createElement("button");
+                eliminarButton.textContent = "Eliminar";
+                eliminarButton.classList.add("btn", "btn-danger", "btn-sm");
+                eliminarButton.addEventListener("click", function () {
+                    carrito.splice(index, 1); // Eliminar el artículo del carrito
+                    carritoCount.textContent = carrito.reduce((sum, item) => sum + item.cantidad, 0); // Actualizar el contador
+                    actualizarResumen(); // Actualizar el resumen y total
+                });
+    
+                // Añadir botón de eliminar al item
+                li.appendChild(eliminarButton);
+                pedidoLista.appendChild(li);
+                total += item.total;
+            });
+    
+            precioTotal.textContent = total.toFixed(2);
+            modal.show();
         });
     
-        cerrarModal.addEventListener('click', () => {
-            modal.classList.remove('active');
+        // Función para actualizar el resumen de pedidos
+        function actualizarResumen() {
+            // Limpiar y actualizar la lista
+            pedidoLista.innerHTML = "";
+            let total = 0;
+            carrito.forEach((item, index) => {
+                const li = document.createElement("li");
+                li.classList.add("list-group-item", "d-flex", "justify-content-between", "align-items-center");
+                li.textContent = `${item.nombre} - ${item.cantidad} x ${item.precio.toFixed(2)} bs = ${item.total.toFixed(2)} bs`;
+    
+                // Crear botón de eliminar
+                const eliminarButton = document.createElement("button");
+                eliminarButton.textContent = "Eliminar";
+                eliminarButton.classList.add("btn", "btn-danger", "btn-sm");
+                eliminarButton.addEventListener("click", function () {
+                    carrito.splice(index, 1); // Eliminar el artículo del carrito
+                    carritoCount.textContent = carrito.reduce((sum, item) => sum + item.cantidad, 0); // Actualizar el contador
+                    actualizarResumen(); // Actualizar el resumen y total
+                });
+    
+                // Añadir botón de eliminar al item
+                li.appendChild(eliminarButton);
+                pedidoLista.appendChild(li);
+                total += item.total;
+            });
+    
+            precioTotal.textContent = total.toFixed(2);
+        }
+    
+        // Enviar pedido a WhatsApp
+        const enviarWhatsapp = document.getElementById("enviar-whatsapp");
+        enviarWhatsapp.addEventListener("click", function () {
+            let mensaje = "🛒 Resumen del Pedido:\n";
+            carrito.forEach(item => {
+                mensaje += `${item.nombre} - ${item.cantidad} x ${item.precio.toFixed(2)} bs = ${item.total.toFixed(2)} bs\n`;
+            });
+            mensaje += `\nTotal: ${precioTotal.textContent} bs`;
+            const numeroWhatsApp = "59173227139"; // Número de WhatsApp
+            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, "_blank");
         });
     });
+    
+    
 </script>
-<script>
-    // Función para obtener el resumen del pedido
-    function obtenerResumenPedido() {
-        let resumen = "Resumen de Pedido:\n";
-        let total = 0;
 
-        // Seleccionar todos los productos y cantidades
-        document.querySelectorAll('.product').forEach(function(producto) {
-            let nombre = producto.querySelector('h2').textContent;
-            let cantidad = producto.querySelector('.cantidad').value;
-            let precio = parseFloat(producto.querySelector('.precio').textContent.trim());
-            let subtotal = precio * cantidad;
-
-            // Añadir al resumen
-            resumen += `${nombre} - Cantidad: ${cantidad} - Precio: ${precio} bs - Subtotal: ${subtotal.toFixed(2)} bs\n`;
-
-            // Sumar al total
-            total += subtotal;
-        });
-
-        // Añadir el total al final del resumen
-        resumen += `\nTotal: ${total.toFixed(2)} bs`;
-
-        return resumen;
-    }
-
-    // Agregar el evento al botón de WhatsApp
-    document.getElementById("enviar-whatsapp").addEventListener("click", function() {
-        let numeroWhatsApp = "59173227139"; // Reemplaza con el número de teléfono de WhatsApp (con código de país)
-        let mensaje = obtenerResumenPedido();
-        let url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
-        
-        // Redirigir a WhatsApp
-        window.open(url, "_blank");
-    });
-</script>
 </html>
