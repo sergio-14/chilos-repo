@@ -6,7 +6,7 @@
   border-radius: 20px;
   
   min-height: 420px;
-  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 12px 0 rgba(255, 1, 1, 0.301);
 
   @media (max-width: 768px) {
     min-height: 340px;
@@ -41,8 +41,8 @@
         background: rgba(255, 185, 33, 0.103);
         background: linear-gradient(
           0deg,
-          rgba(255, 185, 33, 0.103) 0%,
-          rgba(255, 185, 33, 0.027) 100%
+          rgba(2, 2, 43, 0.315) 0%,
+          rgba(5, 4, 68, 0.212) 100%
         );
       }
     }
@@ -52,7 +52,7 @@
     border-top: none;
     .media {
       img {
-        border: solid 3px rgba(255, 255, 255, 0.3);
+        border: solid 3px rgba(219, 217, 217, 0.062);
       }
     }
   }
@@ -60,9 +60,9 @@
     font-weight: 800;
   }
   .card-meta {
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.829);
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 800;
     letter-spacing: 2px;
   }
   .card-body {
@@ -96,7 +96,7 @@ body {
 }
 
 .dark {
-  background: #110f16;
+  background: #4800ff;
 }
 
 .light {
@@ -202,7 +202,7 @@ a:hover {
 
     .tag__item {
       display: inline-block;
-      background: rgba(255, 247, 132, 0.4);
+      background: rgba(248, 232, 2, 0.4);
       border-radius: 3px;
       padding: 2.5px 10px;
       margin: 0 5px 5px 0;
@@ -903,4 +903,9 @@ a:hover {
 .imgrid3{
   height: 410px;
   width: 300px;
+}
+.telefonos{
+  font-size: 30px;
+  font-family: "oswald", serif;
+  font-style: normal;
 }
