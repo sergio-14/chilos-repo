@@ -68,17 +68,18 @@ body{
   font-style: normal;
   font-size: 40px;
   font-weight: bold;
-  color: #ff5e2d;
-  text-shadow: -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0),
-    1px 1px 0 rgb(0, 0, 0);
+  color: #ffffff;
+  text-shadow: -3px -3px 0 rgb(233, 229, 229), 3px -3px 0 rgba(233, 229, 229), -3px 3px 0 rgb(233, 229, 229),
+    3px 3px 0 rgba(233, 229, 229);
 }
+
 
 .titledoss {
   font-size: 100px;
 
   color: #292828;
-  text-shadow: -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0),
-    1px 1px 0 rgb(0, 0, 0);
+  text-shadow: -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgba(0, 0, 0, 0.021),
+    1px 1px 0 rgba(0, 0, 0, 0);
 }
 
 .text{
@@ -291,7 +292,7 @@ body{
   position: absolute;
   bottom: -50%;
   right: 0;
-  width: 440px; 
+  width: 490px; 
   z-index: 1000;
 }
 
