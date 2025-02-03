@@ -74,8 +74,8 @@
   
     left: 0;
     position: absolute;
-    height: 400px;
-    width: 380px;
+    height: 340px;
+    width: 310px;
    
   }
   
@@ -132,7 +132,7 @@
 
   .animated-image {
     position: absolute;
-    bottom: -35%;
+    bottom: -32%;
     right: 0;
     max-width: 240px;
     z-index: 1000;
