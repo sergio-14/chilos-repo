@@ -19,6 +19,32 @@
  
 }
 
+.nosotros{
+  font-family: "Teko", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: #242424;
+  font-size: 23px;
+  z-index: 1000;
+  position: relative;
+}
+
+
+.fondonos {
+  top: 0;
+}
+
+.fondonos1 {
+  
+  left: 0;
+  position: absolute;
+  height: 450px;
+  width: 480px;
+ 
+}
+
+
 .subtitle{
   font-family: "Permanent Marker", serif;
   font-optical-sizing: auto;
@@ -77,10 +103,20 @@ body{
 .titledoss {
   font-size: 100px;
 
-  color: #292828;
-  text-shadow: -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgba(0, 0, 0, 0.021),
-    1px 1px 0 rgba(0, 0, 0, 0);
+  color: #12161bd0;
+  
 }
+
+.spannos {
+  font-weight:900;
+  font-style: normal;
+  
+  font-size: 24px;
+  color: #a80000;
+  text-shadow: -1px -1px 0 rgb(255, 241, 116), 1px -1px 0 rgb(231, 200, 25), -3px 3px 0 rgba(233, 229, 229, 0),
+    3px 3px 0 rgba(233, 229, 229, 0);
+}
+
 
 .text{
   font-family: "oswald", serif;
@@ -415,6 +451,20 @@ body{
 .imgpc{
   max-width: 100%;
   max-height: 200px;
+  filter: drop-shadow(
+    -10px -10px 26px #96918d
+  );
+}
+.imgpc1{
+  max-width: 100%;
+  max-height: 170px;
+  filter: drop-shadow(
+    -10px -10px 26px #96918d
+  );
+}
+.imgpc2{
+  max-width: 100%;
+  max-height: 150px;
   filter: drop-shadow(
     -10px -10px 26px #96918d
   );

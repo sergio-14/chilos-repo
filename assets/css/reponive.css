@@ -70,6 +70,15 @@
 
 
 @media (max-width: 768px) {
+  .fondonos1 {
+  
+    left: 0;
+    position: absolute;
+    height: 400px;
+    width: 380px;
+   
+  }
+  
   .botonflotante * {
     display: none;
   }
@@ -102,6 +111,7 @@
 
   .sechikey {
     padding-top: 146px;
+  
   }
 
   .prod img {
